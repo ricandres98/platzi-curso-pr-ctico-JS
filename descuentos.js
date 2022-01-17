@@ -27,6 +27,8 @@ function onClickPriceDiscount() {
 
     let descuento;
 
+    resultParagraph.style.display = "block";
+    
     isValidCoupon = function(coupons){
         return coupons.nombre === couponValue;
     };

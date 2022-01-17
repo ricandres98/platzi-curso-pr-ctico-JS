@@ -4,10 +4,102 @@
     --primary-color-3: #158A59;
     --black: #010D08;
     --white: #EDF5F2;
-
+    --font-1: 'Kanit', sans-serif;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--primary-color-1);
+    font-family: var(--font-1);
+    font-size: 2rem;
+}
+/*--------------------
+header
+--------------------*/
+header {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header h1 {
+    font-size: 5rem;
+    font-weight: 500;
+    color: var(--white);
+}
+/*--------------------
+main
+----------------------*/
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    margin: 30px;
+}
+form {
+    position: relative;
+    min-width: 555px;
+    height: 520px;
+    padding: 50px;
+    padding-top: 75px;
+    font-size: 2rem;
+    background-color: var(--white);
+    border-radius: 30px;
+    box-shadow: 4px 15px 30px var(--primary-color-3), -4px -15px 30px inset var(--primary-color-3);
+    transform: translate(-50%,0);
+}
+form * {
+    display: block;
+}
+form label {
+    margin-bottom: 40px;
+}
+form label span {
+    margin-bottom: 10px;
+}
+form label input {
+    width: 100%;
+    border-radius: 3px;
+    padding: 5px;
+    border: 1px solid gray;
+    font-size: 2rem;
+}
+form button {
+    width: 80%;
+    margin: 0 auto;
+    aspect-ratio: 5/1;
+    font-size: 2rem;
+    font-family: var(--font-1);
+    color: var(--white);
+    background-color: var(--primary-color-1);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 4px 15px 30px var(--primary-color-3), -4px -15px 30px inset var(--primary-color-3);
+}
+form button:active {
+    background-color: var(--primary-color-3);
+}
+form p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(90%,40%);
+    padding: 40px;
+    border-radius: 20px;
+    background-color: rgba(237, 245, 242, 0.57);
+    box-shadow: 4px 15px 30px var(--primary-color-3), -4px -15px 30px inset var(--primary-color-3);
 }
