@@ -27,9 +27,9 @@ function calcularMediana(lista) {
     });
 
     if (lista.length % 2 === 0) {
-        const elemento1 = lista[mitadLista - 1];
-        const elemento2 = lista[mitadLista];
-        mediana = calcularMediaAritmetica([elemento1, elemento2])
+        const elementoDelMedio1 = lista[mitadLista - 1];
+        const elementoDelMedio2 = lista[mitadLista];
+        mediana = calcularMediaAritmetica([elementoDelMedio1, elementoDelMedio2])
     }
     else {
        mediana = lista[parseInt(mitadLista)];
