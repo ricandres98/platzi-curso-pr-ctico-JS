@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promedio</title>
+    <title>Valores estadísticos</title>
+    
+    <link rel="stylesheet" href="./estadisticas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -12,20 +17,24 @@
         <p>Taller #3 curso práctico de JS</p>
     </header>
     <main>
-        <form action="">
+        <div class="main-card main-card--left">
+            <span class="number">1</span>
             <label for="inputNumber">
                 <span>Ingrese cada elemento y presione el botón para agregarlo a la lista</span>
-                <input type="number" id="inputNumber"/>
+                <input type="number" id="inputNumber" placeholder="#"/>
             </label>
             <button type="reset" onclick="agregarNuevoElemento()">Agregar nuevo</button>
             <button type="button" onclick="borrarDatos()">Borrar datos</button>
+            <p id="listOfElements"></p>
+        </div>
+        <div class="main-card main-card--right">
+            <span class="number">2</span>
             <span>Elija la acción que desea realizar</span>
             <button type="button" onclick="escribirPromedio()">Calcular promedio</button>
             <button type="button" onclick="escribirMediana()">Calcular mediana</button>
             <button type="button" onclick="escribirModa()">Calcular moda</button>
-        </form>
-        <p id="listOfElements"></p>
-        <p id="result"></p>
+            <p id="result"></p>
+        </div>
     </main>
     <script src="./estadisticas.js"></script>
 </body>

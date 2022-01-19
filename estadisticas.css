@@ -1,0 +1,109 @@
+:root {
+    --primary-color-1: #5DA3D9;
+    --primary-color-2: #0861A6;
+    --secondary-color-1: #1A2833;
+    --secondary-color-2: #475866;
+    --black: #031726;
+    --white: #EBEFF2;
+    --binary-color-1: #60BF8F;
+    --binary-color-1-dark: #2A8C5B;
+    --binary-color-0:#D65E56;
+    --binary-color-0-dark: #B23D36;
+    --font-1: 'Russo One', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    padding: 20px;
+    padding-top: 0;
+    font-family: var(--font-1);
+    font-size: 1.5rem;
+    color: var(--white);
+    background-color: var(--secondary-color-1);
+}
+
+/*------------------
+-------Header-------
+-------------------*/
+header
+{
+    max-width: 900px;
+    min-height: 180px;
+    margin: 40px auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color-2);
+    border-radius: 30px;
+    box-shadow: inset -4px -4px 40px var(--secondary-color-1);
+}
+header h1 {
+    margin-bottom: 20px;
+    font-size: 4rem;
+    font-weight: 400;
+}
+header p {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+/*--------------------
+---------Main---------
+---------------------*/
+main {
+    display: grid;
+    /*flex-wrap: wrap;
+    justify-content: center;*/
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 380px));
+    justify-content: center;
+    gap: 45px;
+}
+.main-card {
+    padding: 40px;
+    font-size: 2rem;
+    font-weight: 400;
+    background-color: var(--secondary-color-2);
+    border-radius: 30px;
+    box-shadow: inset -4px -4px 40px var(--secondary-color-1);
+}
+.main-card .number {
+    display: block;
+    margin-bottom: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: var(--secondary-color-1);
+}
+.main-card label span {
+    display: block;
+    margin-bottom: 15px;
+}
+.main-card label input {
+    display: block;
+    height: 30px;
+    width: 50px;
+    padding-left: 5px;
+    margin-bottom: 30px;
+    background-color: var(--white);
+    border-radius: 5px;
+    font-size: 2rem;
+    border: none;
+}
+.main-card button {
+    padding: 10px 40px;
+    margin-bottom: 15px;
+    font-family: var(--font-1);
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 10px;
+}
