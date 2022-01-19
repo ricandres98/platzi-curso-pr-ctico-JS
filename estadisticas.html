@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio</title>
+</head>
+<body>
+    <header>
+        <h1>Valores estadísticos</h1>
+        <p>Taller #3 curso práctico de JS</p>
+    </header>
+    <main>
+        <form action="">
+            <label for="inputNumber">
+                <span>Ingrese cada elemento y presione el botón para agregarlo a la lista</span>
+                <input type="number" id="inputNumber"/>
+            </label>
+            <button type="reset" onclick="agregarNuevoElemento()">Agregar nuevo</button>
+            <button type="button" onclick="borrarDatos()">Borrar datos</button>
+            <span>Elija la acción que desea realizar</span>
+            <button type="button" onclick="escribirPromedio()">Calcular promedio</button>
+            <button type="button" onclick="escribirMediana()">Calcular mediana</button>
+            <button type="button" onclick="escribirModa()">Calcular moda</button>
+        </form>
+        <p id="listOfElements"></p>
+        <p id="result"></p>
+    </main>
+    <script src="./estadisticas.js"></script>
+</body>
+</html>
