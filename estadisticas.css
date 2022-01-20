@@ -9,6 +9,7 @@
     --binary-color-1-dark: #2A8C5B;
     --binary-color-0:#D65E56;
     --binary-color-0-dark: #B23D36;
+    --focus-color: #9fcff3;
     --font-1: 'Russo One', sans-serif;
 }
 * {
@@ -20,19 +21,28 @@ html {
     font-size: 62.5%;
 }
 body {
-    padding: 20px;
+    height: 100%;
+    /*padding: 20px;*/
     padding-top: 0;
     font-family: var(--font-1);
     font-size: 1.5rem;
     color: var(--white);
     background-color: var(--secondary-color-1);
+    background: linear-gradient(0deg, rgba(15,24,31,1) 36%, rgba(26,40,51,1) 65%);
+}
+*:focus-visible {
+    outline: none;
+    outline: 2px solid  var(--focus-color);
 }
 
 /*------------------
 -------Header-------
 -------------------*/
-header
-{
+header {
+    width: 100%;
+    padding: 20px;
+}
+header .header-container {
     max-width: 900px;
     min-height: 180px;
     margin: 40px auto;
@@ -61,6 +71,7 @@ header p {
 ---------Main---------
 ---------------------*/
 main {
+    padding: 0 20px;
     display: grid;
     /*flex-wrap: wrap;
     justify-content: center;*/
@@ -69,6 +80,7 @@ main {
     gap: 45px;
 }
 .main-card {
+    height: min-content;
     padding: 40px;
     font-size: 2rem;
     font-weight: 400;
@@ -93,17 +105,24 @@ main {
 .main-card label input {
     display: block;
     height: 30px;
-    width: 50px;
+    width: 70px;
     padding-left: 5px;
     margin-bottom: 30px;
     background-color: var(--white);
     border-radius: 5px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     border: none;
+    border: 1px solid var(--secondary-color-1);
+}
+.main-card label input:focus-visible {
+    /* outline: none;
+    outline: 2px solid var(--focus-color); */
+    /* border: 3px solid var(--secondary-color-1); */
 }
 .main-card button {
+    display: block;
     padding: 10px 40px;
-    margin-bottom: 15px;
+    margin:0 auto 15px;
     font-family: var(--font-1);
     font-size: 1.8rem;
     border: none;
@@ -111,6 +130,7 @@ main {
     cursor: pointer;
 }
 .add-new-element {
+    min-width: 72%;
     background-color: var(--binary-color-1);
     box-shadow: inset -4px -4px 10px var(--binary-color-1-dark);
 }
@@ -121,6 +141,7 @@ main {
     background-color: #4ba87a;
 }
 .erase-data {
+    min-width: 72%;
     background-color: var(--binary-color-0);
     box-shadow: inset -4px -4px 10px var(--binary-color-0-dark);
 }
@@ -130,9 +151,9 @@ main {
 .erase-data:active {
     background-color: #cc5148;
 }
-.lista-de-elementos {
+.main-card-message {
     display: none;
-    margin: 0 auto;
+    margin: 25px auto 0;
     max-width: 150px;
     text-align: center;
 }
@@ -140,7 +161,7 @@ main {
 /*-----------
 ----card-2---
 ------------*/
-.main-card > p {
+.main-card--right > p {
     margin-bottom: 20px;
 }
 .action-button {
@@ -151,10 +172,36 @@ main {
     box-shadow: inset -4px -4px 10px var(--primary-color-2);
 }
 .action-button:hover {
-    background-color: #5096cc;4c8fc2
+    background-color: #5096cc;
 }
 .action-button:active {
     background-color: #4c8fc2;
+}
+
+/*-----------
+----card-2---
+------------*/
+
+footer {
+    margin-top: 100px;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    height:180px;
+    background-color: var(--secondary-color-2);
+    background: radial-gradient(circle, rgba(71,88,102,1) 48%, rgba(26,40,51,1) 99%);
+}
+footer p {
+    /* align-self: flex-end; */
+}
+footer ul {
+    margin-top: 20px;
+    justify-self: center;
+    list-style: none;
+}
+footer li a {
+    color: var(--white);
 }
 /*-------------------
 Media Queries
