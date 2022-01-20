@@ -8,6 +8,7 @@ function agregarNuevoElemento() {
     lista.push(Number(inputNumber.value));
     
     //Escribir en pantalla el array
+    listOfElements.style.display = "block";
     listOfElements.innerText = "";
     for (let i = 0; i < lista.length - 1; i++) {
         listOfElements.innerText += " " + lista[i] + ", ";
@@ -17,6 +18,7 @@ function agregarNuevoElemento() {
 
 function borrarDatos() {
     lista = [];
+    listOfElements.style.display = "none";
     listOfElements.innerText = "";
     result.innerText = "";
 }

@@ -47,12 +47,14 @@ header
 }
 header h1 {
     margin-bottom: 20px;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 400;
+    text-align: center;
 }
 header p {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 400;
+    text-align: center;
 }
 
 /*--------------------
@@ -106,4 +108,62 @@ main {
     font-size: 1.8rem;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
+}
+.add-new-element {
+    background-color: var(--binary-color-1);
+    box-shadow: inset -4px -4px 10px var(--binary-color-1-dark);
+}
+.add-new-element:hover {
+    background-color: #4eb481;
+}
+.add-new-element:active {
+    background-color: #4ba87a;
+}
+.erase-data {
+    background-color: var(--binary-color-0);
+    box-shadow: inset -4px -4px 10px var(--binary-color-0-dark);
+}
+.erase-data:hover {
+    background-color: #d4554b;
+}
+.erase-data:active {
+    background-color: #cc5148;
+}
+.lista-de-elementos {
+    display: none;
+    margin: 0 auto;
+    max-width: 150px;
+    text-align: center;
+}
+
+/*-----------
+----card-2---
+------------*/
+.main-card > p {
+    margin-bottom: 20px;
+}
+.action-button {
+    display: block;
+    min-width: 83%;
+    margin: 0 auto 15px;
+    background-color: var(--primary-color-1);
+    box-shadow: inset -4px -4px 10px var(--primary-color-2);
+}
+.action-button:hover {
+    background-color: #5096cc;4c8fc2
+}
+.action-button:active {
+    background-color: #4c8fc2;
+}
+/*-------------------
+Media Queries
+-------------------*/
+@media (min-width: 540px) {
+    header h1 {
+        font-size: 4rem;
+    }
+    header p {
+        font-size: 2.2rem;
+    }
 }

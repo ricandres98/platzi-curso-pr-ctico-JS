@@ -23,16 +23,16 @@
                 <span>Ingrese cada elemento y presione el botón para agregarlo a la lista</span>
                 <input type="number" id="inputNumber" placeholder="#"/>
             </label>
-            <button type="reset" onclick="agregarNuevoElemento()">Agregar nuevo</button>
-            <button type="button" onclick="borrarDatos()">Borrar datos</button>
-            <p id="listOfElements"></p>
+            <button type="reset" class="add-new-element" onclick="agregarNuevoElemento()">Agregar nuevo</button>
+            <button type="button" class="erase-data" onclick="borrarDatos()">Borrar datos</button>
+            <p class="lista-de-elementos" id="listOfElements"></p>
         </div>
         <div class="main-card main-card--right">
             <span class="number">2</span>
-            <span>Elija la acción que desea realizar</span>
-            <button type="button" onclick="escribirPromedio()">Calcular promedio</button>
-            <button type="button" onclick="escribirMediana()">Calcular mediana</button>
-            <button type="button" onclick="escribirModa()">Calcular moda</button>
+            <p>Elija la acción que desea realizar</p>
+            <button class="action-button" type="button" onclick="escribirPromedio()">Calcular promedio</button>
+            <button class="action-button" type="button" onclick="escribirMediana()">Calcular mediana</button>
+            <button class="action-button" type="button" onclick="escribirModa()">Calcular moda</button>
             <p id="result"></p>
         </div>
     </main>
