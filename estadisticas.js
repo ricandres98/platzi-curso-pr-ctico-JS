@@ -104,7 +104,7 @@ function calcularModa(list){
         }
 
         // Si todos son modas, nadie es moda
-        if (modas.length === lista.length) {
+        if (listaArray.length === 1) {
             return "no hay moda";
         } 
         else {
