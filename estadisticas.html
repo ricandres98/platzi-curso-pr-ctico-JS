@@ -13,19 +13,21 @@
 </head>
 <body>
     <header>
-        <h1>Valores estadísticos</h1>
-        <p>Taller #3 curso práctico de JS</p>
+        <div class="header-container">
+            <h1>Valores estadísticos</h1>
+            <p>Taller #3 curso práctico de JS</p>
+        </div>
     </header>
     <main>
         <div class="main-card main-card--left">
             <span class="number">1</span>
             <label for="inputNumber">
                 <span>Ingrese cada elemento y presione el botón para agregarlo a la lista</span>
-                <input type="number" id="inputNumber" placeholder="#"/>
+                <input type="number" id="inputNumber" />
             </label>
-            <button type="reset" class="add-new-element" onclick="agregarNuevoElemento()">Agregar nuevo</button>
+            <button type="button" class="add-new-element" onclick="agregarNuevoElemento()">Agregar nuevo</button>
             <button type="button" class="erase-data" onclick="borrarDatos()">Borrar datos</button>
-            <p class="lista-de-elementos" id="listOfElements"></p>
+            <p class="main-card-message" id="listOfElements"></p>
         </div>
         <div class="main-card main-card--right">
             <span class="number">2</span>
@@ -33,9 +35,17 @@
             <button class="action-button" type="button" onclick="escribirPromedio()">Calcular promedio</button>
             <button class="action-button" type="button" onclick="escribirMediana()">Calcular mediana</button>
             <button class="action-button" type="button" onclick="escribirModa()">Calcular moda</button>
-            <p id="result"></p>
+            <p class="main-card-message" id="result"></p>
         </div>
     </main>
+    <footer>
+        <p>Este sitio web es un taller de práctica realizado por Ricardo Ojeda para el curso  práctico de JavaScript de Platzi.</p>
+        <ul>
+            <li><a href="./figuras.html">Fíguras geométricas</a></li>
+            <li><a href="./descuentos.html">Descuentos con cupones</a></li>
+            <li><a href="./estadisticas.html">Valores estadísticos</a></li>
+        </ul>
+    </footer>
     <script src="./estadisticas.js"></script>
 </body>
 </html>

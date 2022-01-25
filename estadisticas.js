@@ -4,25 +4,6 @@ const result = document.getElementById("result");
 
 let lista = []
 
-function agregarNuevoElemento() {
-    lista.push(Number(inputNumber.value));
-    
-    //Escribir en pantalla el array
-    listOfElements.style.display = "block";
-    listOfElements.innerText = "";
-    for (let i = 0; i < lista.length - 1; i++) {
-        listOfElements.innerText += " " + lista[i] + ", ";
-    }
-    listOfElements.innerText += " " + lista[lista.length - 1];
-}
-
-function borrarDatos() {
-    lista = [];
-    listOfElements.style.display = "none";
-    listOfElements.innerText = "";
-    result.innerText = "";
-}
-
 function calcularMediaAritmetica(list) {
     // let sumaLista = 0;
     // for (let i = 0; i < lista.length; i++) {
@@ -104,7 +85,7 @@ function calcularModa(list){
         }
 
         // Si todos son modas, nadie es moda
-        if (listaArray.length === 1) {
+        if (listaArray.length === 1 || modas.length === lista.length) {
             return "no hay moda";
         } 
         else {
@@ -113,8 +94,43 @@ function calcularModa(list){
     }
 }
 
-// 
+///////////////////////////////////////////
+// Funciones que escriben en el DOM
+///////////////////////////////////////////
+function showMessage() {
+    result.style.display = "block";
+}
+inputNumber.addEventListener('keyup', pressToAdd);
+
+function pressToAdd(key) {
+    const ENTER = 13;
+    if (key.keyCode === ENTER) {
+        agregarNuevoElemento(lista);
+        inputNumber.value = "";
+    }
+    // console.log(key.keyCode);
+}
+function agregarNuevoElemento() {
+    lista.push(Number(inputNumber.value));
+    
+    //Escribir en pantalla el array
+    listOfElements.style.display = "block";
+    listOfElements.innerText = "";
+    for (let i = 0; i < lista.length - 1; i++) {
+        listOfElements.innerText += " " + lista[i] + ", ";
+    }
+    listOfElements.innerText += " " + lista[lista.length - 1];
+}
+
+function borrarDatos() {
+    lista = [];
+    listOfElements.style.display = "none";
+    listOfElements.innerText = "";
+    result.innerText = "";
+}
+
 function escribirPromedio(){
+    showMessage();
     if (calcularMediaAritmetica(lista) === "error") {
         result.innerText = "No ha introducido ningún elemento";
     }
@@ -124,6 +140,7 @@ function escribirPromedio(){
 }
 
 function escribirMediana(){
+    showMessage();
     if (calcularMediana(lista) === "error") {
         result.innerText = "No ha introducido ningún elemento";
     }
@@ -133,6 +150,7 @@ function escribirMediana(){
 }
 
 function escribirModa(){
+    showMessage();
     if (calcularModa(lista) === "error") {
         result.innerText = "No ha introducido ningún elemento";
     } 
