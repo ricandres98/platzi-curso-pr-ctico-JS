@@ -13,6 +13,30 @@ function contactados(lista) {
     );
 }
 
+function interesados(lista) {
+    return lista.filter(
+        function(candidato){
+            return candidato.fase1 === "interesado";
+        }
+    );
+}
+function noInteresados(lista) {
+    return lista.filter(
+        function(candidato){
+            return candidato.fase1 === "noInteresado";
+        }
+    );
+}
+
+function procesosIniciados(lista) {
+    return lista.filter(
+        function(candidato){
+           return candidato.fase1 === "inicio";
+        }
+    );
+} 
+
+
 // let busqueda = [];
 
 // function filtrarFase1(lista){
