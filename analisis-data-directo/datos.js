@@ -233,7 +233,7 @@ candidatos.push(new candidato("43715311 ","noInteresado","","","savannah"));
 candidatos.push(new candidato("44035801 ","noCont","","","savannah"));
 candidatos.push(new candidato("41362494 ","noCont","","","savannah"));
 candidatos.push(new candidato("002193960 ","noInteresado","","","savannah"));
-candidatos.push(new candidato("interesado ","interesado","","","savannah"));
+candidatos.push(new candidato("41796151 ","interesado","","","savannah"));
 candidatos.push(new candidato("42504867 ","noCal","","","savannah"));
 candidatos.push(new candidato("74744386 ","noInteresado","","","savannah"));
 candidatos.push(new candidato("72054922 ","noCont","","","savannah"));

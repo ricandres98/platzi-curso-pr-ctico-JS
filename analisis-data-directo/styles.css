@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+ul {
+    list-style: none;
+}
+body {
+    font-size: 2rem;
+}
+
+header {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background-color: #bbb;
+}
+main {
+    padding: 0 20px 40px;
+    display: grid;
+    justify-items: center;
+    background-color: #ddd;
+}
+main h2 {
+    margin: 20px 0 30px;
+    font-size: 2.5rem;
+}
+.container__general {
+    background-color: #eee;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+.container__general h3 {
+    margin-bottom: 15px;
+}
+.lista-de-datos li{
+    margin-bottom: 10px;
+}
+.lista-de-datos li span {
+    font-weight: bold;
+}
+.container__especifico {
+    background-color: #eee;
+    padding: 15px;
+}
+.container__especifico h3 {
+    margin-bottom: 15px;
+}
+.container__especifico form {
+    margin-bottom: 15px;
+}

@@ -5,25 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analisis data Directo</title>
+
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1>Analisis de datos obtenidos de los leads</h1>
+    <header>
+        <h1>Analisis de datos obtenidos de los leads</h1>
+    </header>
     <main>
-        <p>Análisis de los resultados obtenidos con los leads de enero 2022</p>
-        <ul>
-            <li>General
-                <ul>
-                    <li>Total</li>
-                    <li>No pudieron contactarse</li>
-                    <li>No califican</li>
-                    <li>No están interesados</li>
-                    <li>Interesados que pueden iniciar pronto</li>
-                    <li>Procesos iniciados</li>
-                    <li>Procesos iniciados</li>
+        <h2>Análisis de los resultados obtenidos con los leads de enero 2022</h2>
+        <div class="container">
+            <div class="container__general">
+                <h3>General</h3>
+                <ul class="lista-de-datos">
+                    <li>Total leads: <span id="total-general"></span></li>
+                    <li>Leads repetidos: <span id="repetidos-general"></span></li>
+                    <li>No pudieron contactarse: <span id="noCont-general"></span></li>
+                    <li>No califican: <span id="noCal-general"></span></li>
+                    <li>No están interesados: <span id="noInt-general"></span></li>
+                    <li>Interesados que pueden iniciar pronto: <span id="int-general"></span></li>
+                    <li>Procesos iniciados: <span id="inicio-general"></span></li>
                 </ul>
-            </li>
-            <li>Por afiliadora</li>
-        </ul>
+            </div>
+            <div class="container__especifico">
+                <h3>Por afiliadora</h3>
+                <form name="listaAfiliadoras" class="lista-afiliadoras">
+                    <label for="radio-savannah">
+                        <input type="radio" name="afiliadoras" value="savannah"id="radio-savannah">
+                        <span>Savannah</span> 
+                    </label>
+                    <label for="radio-leycy">
+                        <input type="radio" name="afiliadoras" value="leycy" id="radio-leycy">
+                        <span>Leycy</span>
+                    </label>
+                </form>
+                <ul class="lista-de-datos">
+                    <li>Total: <span id="total-especifico"></span></li>
+                    <li>Leads repetidos en esta data: <span id="repetidos-especifico"></span></li>
+                    <li>No pudieron contactarse: <span id="noCont-especifico"></span></li>
+                    <li>No califican: <span id="noCal-especifico"></span></li>
+                    <li>No están interesados: <span id="noInt-especifico"></span></li>
+                    <li>Interesados que pueden iniciar pronto: <span id="int-especifico"></span></li>
+                    <li>Procesos iniciados: <span id="inicio-especifico"></span></li>
+                </ul>
+            </div>
+        </div>
     </main>
     
 
