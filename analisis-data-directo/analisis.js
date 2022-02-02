@@ -107,85 +107,19 @@ function numeroDeRepetidosEnLista(lista) {
     
     return leadsRepetidos;
 }
-// Funciones que escriben en el DOM
 
-const totalGeneral = document.getElementById('total-general');
-const repetidosGeneral = document.getElementById('repetidos-general');
-const noContGeneral = document.getElementById('noCont-general');
-const noCalGeneral = document.getElementById('noCal-general');
-const noIntGeneral = document.getElementById('noInt-general');
-const intGeneral = document.getElementById('int-general');
-const inicioGeneral = document.getElementById('inicio-general');
+//Se desea calcular el porcentaje de candidatos CONTACTADOS que:
+// - No califican
+// - No están interesados
+// - Iniciarán pronto
+// - Iniciaron proceso
 
-const elementosBloqueGeneral = [
-    totalGeneral,
-    repetidosGeneral,
-    noContGeneral,
-    noCalGeneral,
-    noIntGeneral,
-    intGeneral,
-    inicioGeneral
-];
+function calcularporcentaje(lista, parametro) {
+    const total = lista.length;
+    const numero = lista.filter((candidato) => candidato.fase1 === parametro).length;
+    console.log(numero);
 
-function escribirValor(lugar, valor) {
-    lugar.innerHTML = valor;
-}
-function escribirBloque(bloque, lista) {    
-    escribirValor(bloque[0], lista.length);
-    escribirValor(bloque[1], numeroDeRepetidosEnLista(lista));
-    escribirValor(bloque[2], lista.filter((candidato) => candidato.fase1 === 'noCont').length);
-    escribirValor(bloque[3],lista.filter((candidato) => candidato.fase1 === 'noCal').length);
-    escribirValor(bloque[4], noInteresados(lista).length);
-    escribirValor(bloque[5], interesados(lista).length);
-    escribirValor(bloque[6], procesosIniciados(lista).length);
-}
-
-escribirBloque(elementosBloqueGeneral, candidatos);
-
-const totalEspec = document.getElementById('total-especifico');
-const repetidosEspec = document.getElementById('repetidos-especifico');
-const noContEspec = document.getElementById('noCont-especifico');
-const noCalEspec = document.getElementById('noCal-especifico');
-const noIntEspec = document.getElementById('noInt-especifico');
-const intEspec = document.getElementById('int-especifico');
-const inicioEspec = document.getElementById('inicio-especifico');
-
-const elementosBloqueEspec = [
-    totalEspec,
-    repetidosEspec,
-    noContEspec,
-    noCalEspec,
-    noIntEspec,
-    intEspec,
-    inicioEspec
-];
-
-escribirBloque(elementosBloqueEspec, savannah);
-
-// const opcionSavannah = document.getElementById('radio-savannah');
-// const opcionLeycy = document.getElementById('radio-leycy');
-const listaAfiliadoras = document.listaAfiliadoras;
-const listaAfiliadorasArray = listaAfiliadoras.afiliadoras;
-
-listaAfiliadoras.addEventListener('click', () => {
-    let i = 0;
-    let opcionSeleccionada = '';
-
-    for(i = 0; i < listaAfiliadorasArray.length; i++) {
-        if(listaAfiliadorasArray[i].checked) {
-            break;
-        }
-    }
+    const porcentaje = (numero / total) * 100;
     
-    opcionSeleccionada = listaAfiliadorasArray[i].value;
-
-    switch(opcionSeleccionada) {
-        case 'savannah': 
-            escribirBloque(elementosBloqueEspec, savannah);
-            break;
-
-        case 'leycy':
-            escribirBloque(elementosBloqueEspec, leycy);
-            break;
-    }
-});
+    return porcentaje.toFixed(2);
+}
