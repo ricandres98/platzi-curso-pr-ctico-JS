@@ -114,10 +114,10 @@ function numeroDeRepetidosEnLista(lista) {
 // - Iniciarán pronto
 // - Iniciaron proceso
 
-function calcularporcentaje(lista, parametro) {
-    const total = lista.length;
+function calcularPorcentajeContactados(lista, parametro) {
+    const total = contactados(lista).length;
     const numero = lista.filter((candidato) => candidato.fase1 === parametro).length;
-    console.log(numero);
+    console.log(numero + ' / ' + total);
 
     const porcentaje = (numero / total) * 100;
     
