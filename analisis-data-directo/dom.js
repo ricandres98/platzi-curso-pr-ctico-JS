@@ -23,14 +23,14 @@ function escribirValor(lugar, valor) {
     lugar.innerHTML = valor;
 }
 function escribirBloque(bloque, lista) {    
-    escribirValor(bloque[0], lista.length);
-    escribirValor(bloque[1], numeroDeRepetidosEnLista(lista));
-    escribirValor(bloque[2], contactados(lista).length);
-    escribirValor(bloque[3], lista.filter((candidato) => candidato.fase1 === 'noCont').length);
-    escribirValor(bloque[4],lista.filter((candidato) => candidato.fase1 === 'noCal').length);
-    escribirValor(bloque[5], noInteresados(lista).length);
-    escribirValor(bloque[6], interesados(lista).length);
-    escribirValor(bloque[7], procesosIniciados(lista).length);
+    bloque[0].innerHTML = lista.length;
+    bloque[1].innerHTML = numeroDeRepetidosEnLista(lista);
+    bloque[2].innerHTML = contactados(lista).length;
+    bloque[3].innerHTML = lista.filter((candidato) => candidato.fase1 === 'noCont').length;
+    bloque[4].innerHTML =lista.filter((candidato) => candidato.fase1 === 'noCal').length;
+    bloque[5].innerHTML = noInteresados(lista).length;
+    bloque[6].innerHTML = interesados(lista).length;
+    bloque[7].innerHTML = procesosIniciados(lista).length;
 }
 
 escribirBloque(elementosBloqueGeneral, candidatos);
@@ -84,3 +84,47 @@ listaAfiliadoras.addEventListener('click', () => {
 
     listaAfiliadoras.classList.add('checked');
 });
+
+const contactadosComparaL = document.getElementById('contactados-l');
+const noContComparaL = document.getElementById('noCont-l');
+const noCalComparaL = document.getElementById('noCal-l');
+const noIntComparaL = document.getElementById('noInt-l');
+const intComparaL = document.getElementById('int-l');
+const inicioComparaL = document.getElementById('inicio-l');
+
+const elementosComparaL = [
+    contactadosComparaL,
+    noContComparaL,
+    noCalComparaL,
+    noIntComparaL,
+    intComparaL,
+    inicioComparaL,
+]
+
+const contactadosComparaR = document.getElementById('contactados-r');
+const noContComparaR = document.getElementById('noCont-r');
+const noCalComparaR = document.getElementById('noCal-r');
+const noIntComparaR = document.getElementById('noInt-r');
+const intComparaR = document.getElementById('int-r');
+const inicioComparaR = document.getElementById('inicio-r');
+
+const elementosComparaR = [
+    contactadosComparaR,//0
+    noContComparaR,//1
+    noCalComparaR,//2
+    noIntComparaR,//3
+    intComparaR,//4
+    inicioComparaR,//5
+]
+
+function escribirPorcentajes(bloque, lista) {
+    bloque[0].innerHTML = calcularPorcentajeContactado(lista) + '%';
+    bloque[1].innerHTML = calcularPorcentajeCategoria(lista, 'noCont') + '%';
+    bloque[2].innerHTML = calcularPorcentajeCategoria(contactados(lista), 'noCal') + '%';
+    bloque[3].innerHTML = calcularPorcentajeCategoria(contactados(lista), 'noInteresado') + '%';
+    bloque[4].innerHTML = calcularPorcentajeCategoria(contactados(lista), 'interesado') + '%';
+    bloque[5].innerHTML = calcularPorcentajeCategoria(contactados(lista), 'inicio') + '%';
+}
+
+escribirPorcentajes(elementosComparaL, savannah);
+escribirPorcentajes(elementosComparaR, leycy);

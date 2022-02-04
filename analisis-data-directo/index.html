@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analisis data Directo</title>
+    <title>Análisis de datos</title>
 
     <link rel="shortcut icon" href="./favicon.png">
 
@@ -23,8 +23,8 @@
         </section>
         <section class="main-content">
             <h2>Análisis de los resultados obtenidos con los leads de enero 2022</h2>
-            <div class="container">
-                <div class="container__general">
+            <div class="container-data">
+                <div class="container-data__general">
                     <h3>General</h3>
                     <ul class="lista-de-datos">
                         <li>Total leads: <span id="total-general"></span></li>
@@ -37,7 +37,7 @@
                         <li>Procesos iniciados: <span id="inicio-general"></span></li>
                     </ul>
                 </div>
-                <div class="container__especifico">
+                <div class="container-data__especifico">
                     <h3>Por afiliadora</h3>
                     <form name="listaAfiliadoras" class="lista-afiliadoras">
                         <label for="radio-savannah">
@@ -58,6 +58,49 @@
                         <li>No están interesados: <span id="noInt-especifico"></span></li>
                         <li>Interesados que pueden iniciar pronto: <span id="int-especifico"></span></li>
                         <li>Procesos iniciados: <span id="inicio-especifico"></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-comparativo">
+                <h2>Comparativo</h2>
+                <p>
+                    Calculamos el porcentaje de <strong>leads totales que han sido contactados</strong>  y luego el porcentaje de los contactados dentro de cada categoría.
+                </p>
+                <div class="container-comparativo__box">
+                    <div class="box__afiliadoras">
+                        <span>Savannah</span>
+                        <span>Leycy</span>
+                    </div>
+                    <ul class="lista-de-datos">
+                        <li>
+                            <span id="contactados-l"></span>
+                            Leads contactados
+                            <span id="contactados-r"></span>
+                        </li>
+                        <li>
+                            <span id="noCont-l"></span>
+                            No pudieron contactarse
+                            <span id="noCont-r"></span>
+                        </li>
+                        <li>
+                            <span id="noCal-l"></span>
+                            No califican
+                            <span id="noCal-r"></span>
+                        </li>
+                        <li>
+                            <span id="noInt-l"></span>
+                            No están interesados
+                            <span id="noInt-r"></span>
+                        </li>
+                        <li>
+                            <span id="int-l"></span>
+                            Interesados<span id="int-r"></span>
+                        </li>
+                        <li>
+                            <span id="inicio-l"></span>
+                            Procesos iniciados
+                            <span id="inicio-r"></span>
+                        </li>
                     </ul>
                 </div>
             </div>

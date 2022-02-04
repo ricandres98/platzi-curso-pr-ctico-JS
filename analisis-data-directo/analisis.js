@@ -71,14 +71,14 @@ function buscarRepetidos(lista) {
         }
     );
 
-    listaArray.map(
-        function(elemento) {
-            console.log(elemento[0]
-                + " aparece "
-                + elemento[1]
-                + " veces");
-        }
-    );
+    // listaArray.map(
+    //     function(elemento) {
+    //         console.log(elemento[0]
+    //             + " aparece "
+    //             + elemento[1]
+    //             + " veces");
+    //     }
+    // );
     
     const repetidos = [];
 
@@ -114,12 +114,21 @@ function numeroDeRepetidosEnLista(lista) {
 // - Iniciarán pronto
 // - Iniciaron proceso
 
-function calcularPorcentajeContactados(lista, parametro) {
-    const total = contactados(lista).length;
+function calcularPorcentajeCategoria(lista, parametro) {
+    const total = lista.length;
     const numero = lista.filter((candidato) => candidato.fase1 === parametro).length;
     console.log(numero + ' / ' + total);
 
     const porcentaje = (numero / total) * 100;
     
-    return porcentaje.toFixed(2);
+    return porcentaje.toFixed(0);
+}
+
+function calcularPorcentajeContactado(lista) {
+    const total = lista.length;
+    const numero = contactados(lista).length;
+
+    const porcentaje = (numero / total) * 100;
+
+    return porcentaje.toFixed(0);
 }
