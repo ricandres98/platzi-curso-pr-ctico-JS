@@ -1,8 +1,8 @@
-const savannah = candidatos.filter(function(candidato){
-    return candidato.afiliadora == "savannah";
+const subject1 = candidatos.filter(function(candidato){
+    return candidato.afiliadora == "subject1";
 });
-const leycy = candidatos.filter(function(candidato){
-    return candidato.afiliadora == "leycy";
+const subject2 = candidatos.filter(function(candidato){
+    return candidato.afiliadora == "subject2";
 });
 
 function contactados(lista) {
